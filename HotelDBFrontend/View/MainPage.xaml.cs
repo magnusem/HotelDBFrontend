@@ -31,5 +31,26 @@ namespace HotelDBFrontend
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (Hoteller.IsSelected)
+            {
+                MyFrame.Navigate(typeof(View.Hoteller));
+            }
+            else if (Gæster.IsSelected)
+            {
+                MyFrame.Navigate(typeof(View.Gæster));
+            }
+            else if (Bookninger.IsSelected)
+            {
+                MyFrame.Navigate(typeof(View.Bookinger));
+            }
+
+            
+            {
+
+            }
+        }
     }
 }
